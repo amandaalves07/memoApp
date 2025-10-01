@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="res/style/styles.css">
+    <script src="funcoes.js" async></script>
+    <title>Login</title>
+</head>
+<body>
+    <!-- navbar começa aqui -->
+	<nav id="navbar">
+		<a id="nav-home" href="index.html"><img src="res/media/img/placeholder.png" id="nav-home-icon" alt="MEMO"></a>
+		<ul class="nav-links">
+			<li class="nav-item"><a>Artigos</a></li>
+			<li class="nav-item"><a>Download</a></li>
+			<li class="nav-item"><a href="login.html">Login</a></li>
+		</ul>
+	</nav>
+	<!-- navbar termina aqui -->
+
+    <main>
+        <form class="baseform" name="form1" action="login02.php" method="POST" onsubmit="return validaFormLogin()">
+            <h1 class="def-subtitle">Login</h1>
+
+            <div class="form-container" id="login-form">
+                <div class="input-container">
+                    <label for="uname" class="form-label">Digite seu e-mail:</label>
+                    <input type="text" placeholder="maria.oliveira@med.com" name="email" class="form-input" id="email" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="pswrd" class="form-label">Senha:</label>
+                    <input type="password" placeholder="Insira sua senha..." name="senha" class="form-input" id="senha" required>
+                </div>
+
+                <button type="submit" class="form-button">Fazer login</button>
+            </div>
+            <p id="reg-link">Ainda não possue uma conta? <a href="register.html">Cadastre-se aqui</a>.</p> <br>
+            <p>Esqueceu sua senha?<a href="novaSenha01.php">Clique aqui</a>.</p>
+        </form>
+    </main>
+</body>
+</html>

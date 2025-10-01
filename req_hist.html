@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+	<link rel="stylesheet" href="res/style/styles.css">
+    <title>Solicitar Histórico</title>
+</head>
+<body>
+        <!-- navbar começa aqui -->
+	<nav id="navbar">
+		<a id="nav-home" href="index.html"><img src="res/media/img/placeholder.png" id="nav-home-icon" alt="MEMO"></a>
+		<ul class="nav-links">
+			<li class="nav-item"><a>Artigos</a></li>
+			<li class="nav-item"><a>Download</a></li>
+			<li class="nav-item"><a href="login.html">Login</a></li>
+		</ul>
+	</nav>
+	<!-- navbar termina aqui -->
+
+    <form class="baseform">
+		<h1 class="def-subtitle">Solicitação de acesso do histórico</h1>
+
+		<div class="form-container" id="reqhist-form">
+			<div class="input-container">
+				<label for="reqID" class="form-label">ID do médico:</label>
+				<input type="text" placeholder="" name="reqID" class="form-input" required>
+			</div>
+
+			<div class="input-container">
+				<label for="reqPacID" class="form-label">ID do paciente:</label>
+				<input type="text" placeholder="" name="reqPacID" class="form-input" required>
+			</div>
+
+			<div class="input-container">
+				<label for="pswrd" class="form-label">Senha:</label>
+				<input type="password" placeholder="Insira sua senha..." name="pswrd" class="form-input" required>
+			</div>
+
+			<button type="submit" class="form-button">Criar uma solicitação</button>
+		</div>
+	</form>
+</body>
+</html>

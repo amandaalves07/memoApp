@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="res/style/styles.css">
+    <script src="funcoes.js"></script>
+    <title>Criar Conta</title>
+</head>
+<body>
+    <!-- navbar começa aqui -->
+	<nav id="navbar">
+		<a id="nav-home" href="index.html"><img src="res/media/img/placeholder.png" id="nav-home-icon" alt="MEMO"></a>
+		<ul class="nav-links">
+			<li class="nav-item"><a>Artigos</a></li>
+			<li class="nav-item"><a>Download</a></li>
+			<li class="nav-item"><a href="login.html">Login</a></li>
+		</ul>
+	</nav>
+	<!-- navbar termina aqui -->
+
+    <main>
+        <form class="baseform" name="form1" action="register02.php" method="POST" enctype="multipart/form-data" onsubmit="return validaFormCad()">
+            <h1 class="def-subtitle">Criar Conta</h1>
+
+            <div class="form-container" id="reg-form">
+
+                <div class="input-container">
+                    <label for="name" class="form-label">Nome:</label>
+                    <input type="text" placeholder="Digite seu nome" name="nome" class="form-input" id="nome" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="dtnasc" class="form-label">Data de Nascimento:</label>
+                    <input type="date" name="dataNasc" class="form-input" id="dataNasc">
+                </div>
+
+                <div class="input-container">
+                    <label for="sexo" class="form-label">Sexo:</label>
+                    <select id="input-sx" name="sexo">
+                        <option value="">Selecione</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                        <option value="N">Outro/Prefiro não informar</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" placeholder="maria.oliveira@med.com" name="email" class="form-input" id="email" oninput="validarEmail(this)" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="phone" class="form-label">Telefone:</label>
+                    <input type="tel" name="tel" id="tel" placeholder="(xx)xxxxx-xxxx" class="form-input" oninput="formatarTel(this)" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="pswrd" class="form-label">Senha:</label>
+
+                    <div class="password-information">
+                        <p>Sua senha deve conter:</p>
+                        <div id="password-length">8 ou mais caracteres</div>
+                        <div id="password-uppercase">1 letra maiúscula</div>
+                        <div id="password-lowercase">1 letra minúscula</div>
+                        <div id="password-number">1 número</div>
+                        <div id="password-symbol">1 caractere especial</div>
+                    </div>
+
+                    <input type="password" placeholder="Insira sua senha..." name="senha" class="form-input" id="senha01" required oninput="validarSenhaCad()">
+                </div>
+
+                <div class="input-container">
+                    <label for="pswrd-repeat" class="form-label">Repita a sua senha:</label>
+                    <input type="password" placeholder="Repita sua senha..." name="pswrd-repeat" class="form-input" id="senha02" required oninput="validarSenhaCad()">
+                </div>
+
+                <div class="input-container">
+                    <label for="profile" class="form-label">Você é cuidador(a) de alguma pessoa com Alzheimer?</label> <br>
+                    <input type="radio" id="cuidadorSim" name="cuidador" value="S" required>
+                    <label for="cuidadorSim">Sim</label>
+                    <input type="radio" id="cuidadorNao" name="cuidador" value="N" required>
+                    <label for="cuidadorNao">Não</label><br>
+                </div>
+
+                <div class="input-container">
+                    <label for="fotoPerf">Foto de perfil:</label>
+                    <input type="file" name="fotoPerf"><br>
+                </div>
+
+                <button type="submit" class="form-button">Fazer cadastro</button>
+            </div>
+            <p id="reg-link">Possue uma conta? <a href="login.html">Faça login aqui</a>.</p>
+        </form>
+    </main>
+</body>
+</html>
